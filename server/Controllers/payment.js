@@ -29,6 +29,7 @@ const sendMail = (hourDeliver, email, product, total, emporter) => {
         order.push(`x${element.quantity} ${element.name} : ${element.price} €`)
     })
 
+    
     const transporter = nodemailer.createTransport({
         pool: true,
         host: "smtp.ethereal.email",
