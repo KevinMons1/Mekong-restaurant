@@ -9,7 +9,7 @@ const mapStyles = {
 export class Area extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
         
         this.state = {
           myPosition: this.props.position,
