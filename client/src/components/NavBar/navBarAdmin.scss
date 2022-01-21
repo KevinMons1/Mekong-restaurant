@@ -1,0 +1,97 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.nav-admin {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 220px;
+    height: 100%;
+    background-color: #dadada;
+
+    .nav-admin-arrow {
+        @include displeyFlex(center);
+        position: absolute;
+        top: 10px;
+        right: -17px;
+        width: 35px;
+        height: 35px;
+        background-color: $colorBlackBlue;
+        border-radius: 50%;
+
+        svg {
+            color: #fff;
+            font-size: 30px
+        }
+    }
+
+    .nav-admin-top {
+        h2 {
+            @include fontFamily("Roboto", bold);
+            font-size: 30px;
+            text-align: center;
+            margin: 15px;
+        }
+
+        .nav-admin-ul {
+            margin: 15px 0 15px 15px;
+            width: 100%;
+
+            li {            
+                list-style: none;
+                margin: 15px 0;
+                padding: 5px;
+                cursor: pointer;
+                -webkit-transition: 0.2s;
+                -o-transition: 0.2s;
+                transition: 0.2s;
+
+                a {
+                    @include displeyFlex(flex-start);                 
+                    text-decoration: none;
+                    color: black;
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .nav-admin-bottom {
+        @include displeyFlex(center);
+        border: none;
+        background: none;
+        margin: 10px;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.nav-admin-active {
+    background-color: #fff;
+    border-radius: 9px;
+}

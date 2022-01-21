@@ -1,0 +1,76 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.messageSmall {
+    @include displeyFlex(space-between);
+    padding: 5px;
+
+    & {
+        border-radius: $borderRadiusMessage;
+
+        p {
+            width: 80%;
+            margin: 0 10px;
+            text-align: start;
+        }
+    
+        svg:first-child {
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            color: #fff;
+        }
+    
+        .messageClose {
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+    
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.successSmall {
+    background-color: $bgSuccess;
+    border: $borderSuccess;
+
+    svg:first-child {
+        background-color: $colorSuccess;
+    }
+}
+
+.errorSmall {
+    background-color: $bgError;
+    border: $borderError;
+
+    svg:first-child {
+        background-color: $colorError;
+    }
+}
+
+.warningSmall {
+    background-color: $bgWarning;
+    border: $borderWarning;
+
+    svg:first-child {
+        background-color: $colorWarning;
+    }
+}
+
+.informationSmall {
+    background-color: $bgInformation;
+    border: $borderInformation;
+
+    svg:first-child {
+        background-color: $colorInformation;
+    }
+}

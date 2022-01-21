@@ -1,0 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.area-opacity {
+    position: absolute!important;
+    top: 50%!important;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100vw!important;
+    height: 100vh!important;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 100;
+}

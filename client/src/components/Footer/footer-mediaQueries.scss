@@ -1,0 +1,92 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 15px 15px 0 15px;
+    }
+
+    .footer-top-center {
+        width: 50%;
+    }
+
+    .footer-top-right {
+        width: 20%;
+        padding: 2px;
+        font-size: 13px!important;
+
+        .footer-info {
+            width: 100%;
+        }
+    }
+
+    .ftl-link {
+        font-size: 18px!important;
+    }
+
+    .ftc-hours-item {
+        div {
+            p {
+                font-size: 15px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px 10px 0 10px;
+        height: auto;
+    }
+
+    .footer-top {
+        height: 30%;
+    }
+
+    .footer-top-center {
+        width: 100%;
+        height: 30%;
+        padding: 10px;
+        border-top: 1px solid #fff;
+        border-left: none;
+        border-right: none;
+    }
+
+    .footer-top-right {
+        width: 50%;
+        font-size: 15px!important;
+        border-left: 1px solid #fff;
+    }
+
+
+    .footer-top-right {
+        width: 50%;
+        
+        .ftl-link {
+            font-size: 15px!important;
+        }
+    }
+
+    .ftc-hours-item {
+        div {
+            p {
+                font-size: 15px!important;
+            }
+        }
+    }
+
+    .footer-bottom {
+    
+            .fb-link {
+                font-size: 12px;
+            }
+    
+            p {
+                font-size: 12px;
+            }
+        }
+}

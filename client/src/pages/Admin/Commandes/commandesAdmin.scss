@@ -1,0 +1,220 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.admin-commandes {
+    @include displeyFlex(space-between);
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        width: 20%;
+        height: 100%;
+    }
+
+    .ac-main {
+        width: 80%;
+        height: 100vh; 
+        overflow-y: scroll;
+
+        .ac-top {
+            @include displeyFlex(flex-start);
+            @include fontFamily("Roboto", bold);
+            margin: 15px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 35px;
+            }
+        }
+
+        .ac-bottom {
+            @include displeyFlex(center);
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+
+            table {
+                border: $borderGrey;
+                border-collapse: collapse;
+                width: 90%;
+
+                thead {
+                    tr {
+                        th {
+                            @include fontFamily("Roboto", bold);
+                            padding: 5px;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            text-align: center;
+                            padding: 5px;
+
+                            &.ac-new {
+                                position: relative;
+                            }
+
+                            &.ac-see {
+                                button {
+                                    width: 100%;
+                                    padding: 2px;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            &.ac-state {
+                                @include displeyFlex(center);
+                                
+                                button {
+                                    margin: 0 5px;
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    -webkit-transition: 0.2s;
+                                    -o-transition: 0.2s;
+                                    transition: 0.2s;
+
+                                    &:hover {
+                                        opacity: 0.6;
+                                    }
+                                }
+                            }
+
+                            &.ac-delete {
+                                button {
+                                    padding: 2px;
+                                    background-color: $colorError;
+                                    border-radius: 4px;
+                                    border: none;
+                                    color: #fff;
+                                    cursor: pointer;
+                                    -webkit-transition: 0.2s;
+                                    -o-transition: 0.2s;
+                                    transition: 0.2s;
+
+                                    &:hover {
+                                        opacity: 0.6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .ac-tr-grey {
+                        background-color: #dadada;
+                    }
+                }
+            }
+
+            .ac-pages {
+                button {
+                    @include fontFamily("Open sans", normal);
+                    margin: 5px;
+                    font-size: 18px;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    -webkit-transition: 0.2s;
+                    -o-transition: 0.2s;
+                    transition: 0.2s;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+
+                    &.ac-pages-active {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .ac-info {
+            @include displeyFlex(space-around);
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            width: 100%;
+            margin-bottom: 15px;
+
+            .ac-info-left {
+                div {
+                    @include displeyFlex(flex-start);
+                    div {
+                        margin: 5px;
+                    }
+                }
+            }
+
+            .ac-info-center {
+                .ac-ic-notif {
+                    @include displeyFlex(center);
+                    .ac-ic-circle {
+                        width: 15px;
+                        height: 15px;
+                        margin: 5px;
+                        border-radius: 50%;
+                        background-color: $colorError;
+                    }
+                }
+                small {
+                    opacity: 0.6;
+                }
+            }
+
+            .ac-info-right {
+                p {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+.ac-state-time {
+    padding: 2px;
+    background-color: $colorInformation;
+    border-radius: 4px;
+
+    svg {
+        color: #fff
+    }
+}
+
+.ac-state-success {
+    padding: 2px;
+    background-color: $colorSuccess;
+    border-radius: 4px;
+
+    svg {
+        color: #fff
+    }
+}
+
+.ac-state-error {
+    padding: 2px;
+    background-color: $colorWarning;
+    border-radius: 4px;
+
+    svg {
+        color: #fff
+    }
+}
+
+.ac-main-messages {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    .ac-main-message {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,76 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1000px) {
+    .admin-commandes { 
+        header {
+            width: 220px!important;
+            height: 100%;
+        }
+    }
+
+    .ac-main {
+        width: calc(100% - 220px)!important;
+        height: 100vh;  
+
+        .ac-info {
+            @include displeyFlex(center);
+            -webkit-box-align: center!important;
+                -ms-flex-align: center!important;
+                    align-items: center!important;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+    
+            .ac-info-left, .ac-info-center, .ac-info-right {
+                width: 80%!important; 
+    
+                .ac-ic-notif {
+                    -webkit-box-pack: start!important;
+                        -ms-flex-pack: start!important;
+                            justify-content: flex-start!important;
+                }
+            }
+        }
+    
+        .ac-top {
+            margin: 15px 35px!important; 
+        }
+
+        p, td, tr {
+            font-size: 15px!important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .admin-commandes { 
+        header {
+            position: absolute!important;
+            pointer-events: none;
+        }
+    }
+
+    .ac-main {
+        width: 100vw!important;
+        height: 100vh;  
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .admin-commandes {
+        .ac-bottom {
+            overflow-x: scroll!important;
+            width: 500px!important;
+
+            p, td, tr, svg {
+                font-size: 14px!important;
+            }
+        }
+    }
+}

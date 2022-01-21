@@ -1,0 +1,382 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1024px) {
+    .header-bottom {
+        padding: 50px;
+    }
+    
+    .header-text {
+        .header-text-top {
+            h1 {
+                font-size: 45px;
+            }
+    
+            h2 {
+                font-size: 30px;
+            }
+        }
+    
+        .header-text-bottom {
+    
+            p {
+                @include fontFamily("Open sans", normal);
+                font-size: 30px;
+            }
+    
+            button {
+                @include btnStyle(1, 1);
+            }
+        }
+    }
+
+    .aso-left {
+        h3 {
+            font-size: 25px;
+        }
+    
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .aso-right {
+        width: 300px;
+    
+        .aso-right-img {
+            height: 300px;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+    
+    .ast-left {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .ast-right {
+        width: 500px;
+        height: 500px;
+    
+        h3 {
+            font-size: 25px;
+        }
+    
+        .ast-info {
+            font-size: 18px;
+        }
+    
+        .ast-hours {
+    
+            .ast-hours-top {
+                font-size: 13px;
+
+            }
+            .ast-hours-bottom {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    
+        button {
+            margin: 15px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ast-left {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .ast-right {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 844px) {
+    .aso-left { 
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .aso-right {
+        width: 250px;
+    
+        .aso-right-img {
+            height: 250px;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .ast-left {
+        margin-left: 50px;
+    }
+    
+    .ast-right {
+        width: 500px;
+        height: 500px;
+        -webkit-transform: translateX(-50px);
+            -ms-transform: translateX(-50px);
+                transform: translateX(-50px);
+
+        .ast-right-box {
+            padding: 20px;
+        }
+    
+        h3 {
+            font-size: 23px;
+        }
+    
+        .ast-info {
+            font-size: 18px;
+        }
+    
+        .ast-hours {
+    
+            .ast-hours-top {
+                font-size: 13px;
+
+            }
+            .ast-hours-bottom {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    
+        button {
+            margin: 15px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aso-bg-circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        z-index: -1;
+    }
+
+    .aso-left {
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .ast-hours {
+        @include displeyFlex(flex-start);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 120px!important;
+
+        .ast-hours-item {
+            -webkit-box-orient: horizontal!important;
+            -webkit-box-direction: normal!important;
+                -ms-flex-direction: row!important;
+                    flex-direction: row!important;
+            width: 100%;
+            margin: 5px!important;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .accueil-section-one {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .aso-right {
+        width: 300px;
+        margin-top: 20px;
+    
+        .aso-right-img {
+            height: 300px;
+    
+            img {
+                width: 100%;
+            }
+        }
+
+        .aso-btn-circle {
+            margin: 10px!important;
+            width: 15px!important;
+            height: 15px!important;
+        }
+    }
+
+    .aso-left {
+        width: 60%;
+        margin-right: 15px;
+    }
+
+    .ast-right {
+        -webkit-transform: translateX(0)!important;
+            -ms-transform: translateX(0)!important;
+                transform: translateX(0)!important;
+    }
+
+    .ast-hours {
+        @include displeyFlex(space-between);
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        height: 110px!important;
+
+        .ast-hours-item {
+            -webkit-box-orient: vertical!important;
+            -webkit-box-direction: normal!important;
+                -ms-flex-direction: column!important;
+                    flex-direction: column!important;
+            margin: 0px!important;
+        }
+    }
+} 
+
+@media screen and (max-width: 550px) {
+    .accueil-section-one {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical!important;
+        -webkit-box-direction: normal!important;
+            -ms-flex-direction: column!important;
+                flex-direction: column!important;
+    }
+
+    .aso-right {
+        width: 275px;
+        .aso-right-img {
+            height: 275px;
+        }
+    }
+
+    .aso-left {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%;
+        margin: 15px;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header-accueil {
+        height: 50vh;
+    }
+
+    .header-bottom {
+        width: 110%;
+        height: 35vh;
+        -webkit-transform: translate(-5%,0 );
+            -ms-transform: translate(-5%,0 );
+                transform: translate(-5%,0 );
+        padding: 50px 30px;
+    }
+    
+    .header-text {
+        @include displeyFlex(center);
+        .header-text-top {
+            h1 {
+                font-size: 45px;
+            }
+    
+            h2 {
+                font-size: 22px;
+            }
+            margin-bottom: 10px;
+        }
+    
+        .header-text-bottom {
+    
+            p {
+                font-size: 22px;
+            }
+    
+            button {
+                @include btnStyle(1, 1);
+            }
+        }
+    }
+
+    .ast-right {
+        width: 400px;
+        height: 400px;
+    
+            .ast-right-box {
+                padding: 10px;
+            }
+        
+            h3 {
+                font-size: 30px;
+            }
+        
+            .ast-info {
+                font-size: 18px;
+            }
+        
+            .ast-hours {
+                width: calc(100% + 75px);
+                -webkit-transform: translate(-32.5px);
+                    -ms-transform: translate(-32.5px);
+                        transform: translate(-32.5px);
+                background-color: transparent;
+
+                .ast-hours-top {
+                    text-align: center;
+                    width: 100%;
+                    font-size: 14px;
+                }
+                .ast-hours-bottom {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+        
+            button {
+                margin: 15px 0;
+            }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .ast-right {
+        width: 100vw;
+        height: auto;
+        border-radius: 0;
+        background-color: transparent; 
+    }
+
+}

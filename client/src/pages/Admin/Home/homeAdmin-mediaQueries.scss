@@ -1,0 +1,93 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1100px) {
+    .ah-bottom {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: auto!important;
+
+        .ah-bottom-left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            
+            .ah-bl-box {
+                width: 450px!important;
+            }
+        }
+    }
+
+    .ah-br-box {
+        width: 450px!important;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .admin-home {
+        header {
+            position: absolute!important;
+            width: 300px!important;
+            height: 100%;
+        }
+    }
+
+    .ah-main {
+        width: 100vw!important;
+        height: 100vh;  
+    }
+
+    .ah-top {
+        margin: 15px 35px!important; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ah-bottom {
+        .ah-bottom-left {
+            .ah-bl-box {
+                width: 275px!important;
+
+                .ah-bl-box-bottom {
+                    @include displeyFlex(flex-start);
+                    height: 100%;
+
+                    .ah-bl-child {
+                        margin: 10px!important; 
+                    }
+                }
+            }
+        }
+
+        .ah-br-box {
+            width: 275px!important;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px!important;
+        }
+
+        p {
+            font-size: 15px!important;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+
+// Laptop
+
+@media screen and (max-width: 1024px) {
+    .navBar {
+        padding: 0 15px;
+    }
+
+    .nav-right {
+        ul {    
+            li {
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+// Tablet
+
+@media screen and (max-width: 768px) {
+    .nav-circle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: $colorBlackBlue;
+        border-radius: 50%;
+        z-index: 1000;
+    }
+
+    .nav-hamb1 {
+        position: fixed;
+        top: 25px;
+        right: 23px;
+        width: 28px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        z-index: 1001;
+    }
+
+    .nav-hamb2 {
+        position: fixed;
+        top: 33px;
+        right: 23px;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        z-index: 1001;
+    }
+
+    .nav-hamb3 {
+        position: fixed;
+        top: 41px;
+        right: 23px;
+        width: 14px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        z-index: 1001;
+    }
+
+    .navBar {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        background: none;
+        z-index: 1002;
+
+        div {
+            @include displeyFlex(center);
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+    }
+    
+    .nav-left {
+        img {
+            -webkit-transform: translate(-15px, 0);
+                -ms-transform: translate(-15px, 0);
+                    transform: translate(-15px, 0);
+            opacity: 0;
+        }
+    }
+    
+    .nav-right {
+        ul {
+            @include displeyFlex(center);
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+    
+            li {
+                @include displeyFlex(center);
+                margin: 15px 0;
+                width: 100%;
+
+                .nav-link {
+                    font-size: 35px;
+                    -webkit-transform: translate(-15px, 0);
+                        -ms-transform: translate(-15px, 0);
+                            transform: translate(-15px, 0);
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .nav-right {
+        ul {    
+            li {
+                a {
+                    font-size: 35px!important;
+                }
+            }
+        }
+    }
+}

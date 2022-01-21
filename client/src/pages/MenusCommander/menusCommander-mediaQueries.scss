@@ -1,0 +1,92 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1024px) {
+    .mc-top-pepper-text {
+        font-size: 15px!important;
+    }
+
+    .mc-top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        .mc-top-left-responsive {
+            @include displeyFlex(center);
+        }
+
+        .mc-top-center {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            width: 75%;
+
+            button {
+                margin: 10px!important;
+            }
+        }
+
+        .mc-top-right {
+            margin: 20px;
+            p {
+                font-size: 15px!important;
+            }
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .mc-area {
+        height: 80vh;
+        width: 85vw;
+    
+        .mc-legend {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .agc-plat-box {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+        .agc-plats {
+            width: 300px!important;
+            .platCard {
+                width: 100%!important;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .mc-message {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }   
+}
+
+@media screen and (max-width: 450px) {
+    .mc-top-left-responsive {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: 15px;
+    }
+}

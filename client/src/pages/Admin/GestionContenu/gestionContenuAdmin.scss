@@ -1,0 +1,230 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.admin-gestionContenu {
+    @include displeyFlex(space-between);
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        width: 20%;
+        height: 100%;
+    }
+
+    .agc-main {
+        width: 80%;
+        height: 100vh;
+        overflow-y: scroll;
+
+        .agc-main-messages {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            .agc-main-message {
+                margin: 10px 0;
+            }
+        }
+
+        .agc-top {
+            @include displeyFlex(flex-start);
+            @include fontFamily("Roboto", bold);
+            margin: 15px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 35px;
+            }
+        }
+
+        .agc-bottom {
+            .agc-info {
+                @include displeyFlex(space-around);
+                -webkit-box-align: start;
+                    -ms-flex-align: start;
+                        align-items: flex-start;
+
+                button {
+                    @include btnStyle(1,0);
+                    width: 150px;
+                }
+
+                a {
+                    @include btnStyle(0,0);
+                    width: 150px;
+                    text-decoration: none
+                }
+
+                .agc-info-legend {
+                    .agc-info-legend-box {
+                        @include displeyFlex(flex-start);
+
+                        .agc-info-legend-icon  {
+                            @include displeyFlex(center);
+                            margin: 5px;
+                            border: none;
+                            border-radius: 5px;
+                            padding: 2px;
+                            cursor: pointer;
+                            -webkit-transition: 0.2s;
+                            -o-transition: 0.2s;
+                            transition: 0.2s;
+        
+                            svg {
+                                font-size: 20px;
+                            }
+        
+                            &:hover {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mc-plats {
+    h3 {
+        @include fontFamily("Roboto", bold);
+        font-size: 40px;
+        margin: 40px;
+        border-bottom: $borderGrey;
+    }
+
+    .agc-plat-box {
+        @include displeyFlex(center);
+
+        .agc-plats {
+            svg {
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                font-size: 50px;
+                position: absolute;
+            }
+        }
+
+        .agc-off-opacity {
+                position: absolute;
+                top: 7%;
+                width: 100%;
+                height: calc(100% - 20px);
+                background-color: rgb(0, 0, 0);
+                opacity: 0.4;
+            }
+
+            .agc-delete-popUp {
+                @include displeyFlex(center);
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                padding: 10px;
+                border: 1px solid #707070;
+                border-radius: 5px;
+                background-color: #fff;
+                z-index: 1000;
+
+                button {
+                    margin: 10px;
+                    padding: 5px;
+                    font-size: 18px;
+                    border-radius: 3px;
+                    border: none;
+                    cursor: pointer;
+                    -webkit-transition: 0.2s;
+                    -o-transition: 0.2s;
+                    transition: 0.2s;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+
+                .agc-dp-green {
+                    background-color: $colorSuccess;
+                }
+
+                .agc-dp-red {
+                    background-color: $colorError;
+                }
+            }
+
+        .agc-action {
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+
+            svg {
+                font-size: 25px;
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.agc-edit {
+    background-color: $colorSuccess;
+    .agc-edit-link {
+        color: black;
+    }
+}
+
+.agc-visibility {
+    background-color: $colorInformation;
+}
+
+.agc-hide {
+    background-color: $colorWarning;
+}
+
+.agc-delete {
+    background-color: $colorError;
+}
+
+.agc-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.agc-plats {    
+    position: relative;
+    list-style: none;
+}
+
+.agc-reset-box {
+    @include displeyFlex(center);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px;
+
+    button {
+        @include btnStyle(1, 0);
+        width: 200px;
+    }
+}

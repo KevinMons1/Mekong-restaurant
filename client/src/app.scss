@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p, small, label, input, textarea, select, option, a, th, td {
+    @include fontFamily("Open sans", normal)
+}
+
+button, input, textarea, select, option {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+#root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.body-nav {
+    overflow-y: hidden
+}
+
+.app-Loader {
+    @include displeyFlex(center);
+    width: 100vw;
+    height: 100vh;
+}

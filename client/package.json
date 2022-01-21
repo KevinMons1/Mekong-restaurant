@@ -1,0 +1,62 @@
+{
+  "name": "mekong-restaurant",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "@stripe/react-stripe-js": "^1.4.1",
+    "@stripe/stripe-js": "^1.16.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "browser-image-compression": "^1.0.14",
+    "cleave.js": "^1.6.0",
+    "dotenv": "^10.0.0",
+    "google-maps-react": "^2.0.6",
+    "gsap": "^3.7.0",
+    "json-server": "^0.16.3",
+    "jspdf": "^2.3.1",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-google-maps": "^9.4.5",
+    "react-google-recaptcha": "^2.1.0",
+    "react-gsap": "^3.2.1",
+    "react-helmet": "^6.1.0",
+    "react-lottie": "^1.2.3",
+    "react-recaptcha": "^2.3.10",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-stripe-checkout": "^2.6.3",
+    "reactjs-localstorage": "^1.0.1",
+    "socket.io-client": "^4.1.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

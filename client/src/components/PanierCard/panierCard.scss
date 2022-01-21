@@ -1,0 +1,157 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.panierCard {
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    max-height: 100vh;
+    padding-bottom: 10px;
+    border: $borderGrey;
+    overflow-y: scroll;
+
+    h4 {
+        @include fontFamily("Roboto", bold);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border-bottom: $borderGrey;
+        font-size: 25px;
+    }
+}
+
+.pc-content {
+    @include displeyFlex(space-between);
+    width: 100%;
+    padding: 10px;
+    border-bottom: $borderGrey;
+
+    .pc-left {
+        @include displeyFlex(center);
+    }
+
+    .pc-right {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        .pc-right-bottom {
+            @include displeyFlex(center);
+
+            .pc-right-bottom-bloc {
+                @include displeyFlex(center);
+                margin: 5px;
+                padding: 3px;
+                background-color: #fff;
+                border: 1px solid $colorOrange;
+                cursor: pointer;
+                -webkit-transition: 0.2s;
+                -o-transition: 0.2s;
+                transition: 0.2s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+        
+    }
+}
+
+.panierCard-phone {
+    width: 100vw;
+    height: 100%;
+    border: 1px solid $colorOrange;
+    
+    .pc-p-top {
+        @include displeyFlex(space-between);
+        padding: 10px 10%;
+        height: 65px;
+        border-bottom: 1px solid black;
+
+        h4 {
+            @include fontFamily("Roboto", bold);
+            font-size: 25px;
+        }
+
+        .pc-p-total {
+            @include displeyFlex(center);
+            p {
+                margin: 0 5px
+            }
+        }
+
+        .pc-p-btn-paid {       
+            @include btnStyle(1, 0);
+            width: 130px;
+    
+            a {
+                @include fontFamily("Roboto", bold);
+            }
+        }
+    }
+
+    .pc-close {
+        @include displeyFlex(center);
+        margin-top: 20px;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.pc-price {
+    @include displeyFlex(space-between);
+    width: 100%;
+    margin: 10px 0;
+
+    .pc-price-text {
+        margin: 5px 10px;
+    }
+}
+
+.pc-box {
+    @include displeyFlex(center);
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
+}
+
+.pc-btn-paid {       
+    @include btnStyle(0, 0);
+    width: 70%!important;
+
+    a {
+        @include fontFamily("Roboto", bold);
+    }
+}
+
+.pc-left-number {
+    min-height: 25px;
+    min-width: 25px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}

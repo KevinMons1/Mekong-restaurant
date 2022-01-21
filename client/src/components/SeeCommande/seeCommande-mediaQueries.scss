@@ -1,0 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 500px) {
+    .seeCommande-content {
+        width: 350px!important;
+        padding: 10px!important;
+        overflow-x: scroll;
+
+        p, h3 {
+            font-size: 15px!important;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .seeCommande-content {
+        width: 300px!important;
+
+        p, h3 {
+            font-size: 14px!important;
+        }
+    }
+}

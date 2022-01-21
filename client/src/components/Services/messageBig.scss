@@ -1,0 +1,101 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.messageBigOpacity {
+    @include absoluteCenter();
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 1000;
+}
+
+.messageBig {
+    @include displeyFlex(center);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    padding: 40px;
+    background-color: #fff;
+    z-index: 1001;
+
+    & {
+        border-radius: $borderRadiusMessage;
+
+        p {
+            @include fontFamily("Roboto", bold);
+            text-align: center;
+            font-size: 22px;
+            width: 100%;
+            margin: 10px;
+        }
+    
+        svg:first-child {
+            border-radius: 5px;
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            padding: 2px;
+            color: #fff;
+        }
+
+        small {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+    
+        .messageClose {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+    
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.successBig {
+    border: $borderSuccess;
+
+    svg:first-child {
+        background-color: $colorSuccess;
+    }
+}
+
+.errorBig {
+    border: $borderError;
+
+    svg:first-child {
+        background-color: $colorError;
+    }
+}
+
+.warningBig {
+    border: $borderWarning;
+
+    svg:first-child {
+        background-color: $colorWarning;
+    }
+}
+
+.informationBig {
+    border: $borderInformation;
+
+    svg:first-child {
+        background-color: $colorInformation;
+    }
+}

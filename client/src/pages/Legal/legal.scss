@@ -1,0 +1,17 @@
+.legal {
+    padding: 20px;
+
+    h1, h3 {
+        @include fontFamily("Roboto", bold)
+    }
+
+    h3 {
+        width: 50%;
+        margin: 15px 0;
+        border-bottom: 1px solid $colorOrange;
+    }
+
+    p, li, ul {
+        margin: 5px 0;
+    }
+}

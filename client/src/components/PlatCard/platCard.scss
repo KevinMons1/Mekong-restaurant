@@ -1,0 +1,104 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.platCard, .platCard-small {
+    @include displeyFlex(space-between);
+    min-height: 120px;
+    padding: 0 5px;
+    margin: 10px 0;
+    border: $borderGrey;
+
+    .plc-left {
+        @include displeyFlex(center);
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+    }
+
+    .plc-center {
+        padding: 5px;
+        margin-left: 10px;
+
+        .plc-name {
+            @include displeyFlex(flex-start);
+            @include fontFamily("Open sans", normal);
+            font-size: 25px;
+            margin-bottom: 10px;
+
+            div {
+                margin-left: 10px;
+            }
+        }
+        
+        p {
+            margin: 10px 0;
+            color: $colorOrange;
+            font-weight: bold;
+        }
+
+        .plc-small {
+            opacity: 0.6;
+        }
+    }
+
+
+    .plc-right {
+        width: 20%;
+        
+        button {
+            @include fontFamily("Open sans", bold);
+            padding: 5px;
+            border: 1px solid $colorOrange;
+            background-color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+
+            .btn-content {
+                @include displeyFlex(center);
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.plc-center-noAdmin {
+    width: 60%;
+}
+
+.plc-center-noAdmin-noSeeOrder {
+    width: calc(100% - 100px);
+}
+
+.plc-center-admin {
+    width: 85%;
+}
+
+
+.platCard-small {
+    width: 600px;
+}
+
+.plc-vegan {
+    padding: 3px;
+    background-color: rgb(62, 197, 80);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}

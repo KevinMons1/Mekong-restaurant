@@ -1,0 +1,129 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+footer {
+    width: 100%;
+    padding: 25px;
+    background-color: $colorBlackBlue;
+    z-index: 15;
+}
+
+.footer-top {
+    @include displeyFlex(space-around);
+    width: 100%;
+    margin: 15px
+}
+
+.footer-top-left {
+    @include displeyFlex(center);
+    width: 30%;
+    
+    ul {
+        li {
+            list-style: none;
+            margin: 10px 0;
+
+            .ftl-link {
+                @include fontFamily('Roboto', normal);
+                font-size: 25px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            a {
+                color: #fff;
+                margin: 0 5px;
+            }
+
+            &:hover {
+                -webkit-transition: 0.2s;
+                -o-transition: 0.2s;
+                transition: 0.2s;
+                opacity: 0.6;
+            }
+        }
+
+        .ftl-div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+}
+
+.footer-top-center {
+    @include displeyFlex(space-around);
+    width: 40%;
+    padding: 0 15px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+    .ftc-hours-item {
+        @include displeyFlex(space-around);     
+        -webkit-box-orient: vertical;     
+        -webkit-box-direction: normal;     
+            -ms-flex-direction: column;     
+                flex-direction: column;
+        height: 50%;
+        margin: 0 5px;
+        color: #fff
+    }
+
+    .ftc-hours-top {
+        @include fontFamily("Open sans", bold);
+        font-size: 15px;
+    }
+
+    .ftc-hours-right {color: #ff6a6a}
+    .ftc-hours-center, .ftc-hours-left {color: #3AEA40}
+}
+
+.footer-top-right {
+    @include displeyFlex(center);
+    @include fontFamily("Open sans", normal);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+
+    .footer-info {
+        @include displeyFlex(flex-start);
+        width: 70%;
+        margin: 10px 0;
+
+        p {
+            margin: 0 10px;
+        }
+    }
+}
+
+.footer-bottom {
+    @include displeyFlex(center);
+    @include fontFamily("Roboto", normal);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #fff;
+
+    .fb {
+        @include displeyFlex(center);
+
+        .fb-link {
+            margin: 5px;
+            color: #fff;
+        }
+
+        a, p {
+            font-size: 12px;
+        }
+    }
+}

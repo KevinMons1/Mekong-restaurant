@@ -1,0 +1,48 @@
+// Globale -----------------------------------------
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// Components -----------------------------------------
+@import "../components/NavBar/navBar.scss";
+@import "../components/NavBar/navBar-mediaQueries.scss";
+
+@import "../components/NavBar/navBarAdmin.scss";
+@import "../components/NavBar/navBarAdmin-mediaQueries.scss";
+
+@import "../components/Footer/footer.scss";
+@import "../components/Footer/footer-mediaQueries.scss";
+
+@import "../components/PanierCard/panierCard.scss";
+
+@import "../components/PlatCard/platCard.scss";
+@import "../components/PlatCard/platCard-mediaQueries.scss";
+
+@import "../components/Filter/filter.scss";
+@import "../components/Filter/filter-mediaQueries.scss";
+
+@import "../components/Services/services.scss";
+
+@import "../components/SeeCommande/seeCommande.scss";
+@import "../components/SeeCommande/seeCommande-mediaQueries.scss";
+
+@import "../components/Area/Area.scss";
+
+// Pages -----------------------------------------
+@import "../pages/Accueil/accueil.scss";
+@import "../pages/Accueil/accueil-mediaQueries.scss";
+
+@import "../pages/MenusCommander/menusCommander.scss";
+@import "../pages/MenusCommander/menusCommander-mediaQueries.scss";
+
+@import "../pages/Panier/panier.scss";
+@import "../pages/Panier/panier-mediaQueries.scss";
+
+@import "../pages/Contact/contact.scss";
+@import "../pages/Contact/contact-mediaQueries.scss";
+
+@import "../pages/Legal/legal.scss";
+
+@import "../pages/Admin/admin.scss";
+
+// Import app -----------------------------------------
+@import "../app.scss";

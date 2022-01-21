@@ -1,0 +1,27 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 768px) {
+    .contact {
+        width: auto!important;
+
+        .contact-form {
+            width: 90%!important;
+        }
+    
+        .contact-label, .contact-label-textarea, .contact-input, .contact-textarea {
+            font-size: 13px!important;
+        }
+
+        .contact-recaptcha {
+            @include displeyFlex(center);
+            -webkit-transform: scale(0.8)!important;
+                -ms-transform: scale(0.8)!important;
+                    transform: scale(0.8)!important;
+        }
+    }
+}

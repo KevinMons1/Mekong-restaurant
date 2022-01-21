@@ -1,0 +1,132 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.admin-site {
+    @include displeyFlex(space-between);
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        width: 20%;
+        height: 100%;
+    }
+
+    .as-main {
+        width: 80%;
+        height: 100vh;
+        overflow-y: scroll;
+
+        .as-main-messages {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            .as-main-message {
+                margin: 10px 0;
+            }
+        }
+
+        .as-top {
+            @include displeyFlex(flex-start);
+            @include fontFamily("Roboto", bold);
+            margin: 15px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 35px;
+            }
+        }
+
+        .as-bottom {
+            .as-box {
+                @include displeyFlex(space-between);
+                margin: 20px;
+                padding: 15px 15px 25px 15px;
+                border-radius: 10px;
+
+                .as-box-left {
+                    h3 {
+                        @include fontFamily("Open sans", normal);
+                        font-size: 25px;
+                    }
+                }
+
+                .as-box-right {
+                    @include displeyFlex(center);
+                }
+
+                .as-box-btn-input {
+                    @include displeyFlex(center);
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+
+                    .as-box-btn {
+                        @include displeyFlex(center);
+                    }
+
+                    .as-input-message {
+                        width: 350px;
+                    }
+                }
+
+                .as-input {
+                    padding: 5px;
+                }
+            }
+        }
+
+        button {
+            @include fontFamily("Opan sans", normal);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            width: 150px;
+            border: none;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .as-btn1 {
+            background-color: rgb(137, 255, 91);
+        }
+        .as-btn2 {
+            background-color: rgb(255, 165, 91);
+        }
+        .as-btn3 {
+            background-color: rgb(255, 91, 91);
+        }
+    }
+}
+
+.as-box1 {
+    border: 1px solid #FCB03F;
+    background-color: #FFEFD7;
+}
+
+.as-box2 {
+    border: 1px solid #3F69FC;
+    background-color: #D7E9FF;
+}
+
+.as-box3 {
+    border: 1px solid #65FC3F;
+    background-color: #DFFFD7;
+}
+
+.as-box4 {
+    border: 1px solid #fc3f3f;
+    background-color: #ffd7d7;
+}

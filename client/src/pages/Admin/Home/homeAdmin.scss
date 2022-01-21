@@ -1,0 +1,130 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.admin-home {
+    @include displeyFlex(space-between);
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        width: 20%;
+        height: 100%;
+    }
+
+    .ah-main {
+        width: 80%;
+        height: 100vh;
+
+        .ah-top {
+            @include displeyFlex(flex-start);
+            @include fontFamily("Roboto", bold);
+            margin: 15px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 35px;
+            }
+        }
+
+        .ah-bottom {
+            @include displeyFlex(space-around);
+            height: 80%;
+            margin-left: 20px;
+
+            .ah-bottom-left {
+                .ah-bl-box {
+                    border-radius: 10px;
+                    width: 450px;
+                    margin: 20px 0;
+                    padding: 15px 15px 25px 15px;
+
+                    h3 {
+                        @include fontFamily("Open sans", normal);
+                        font-size: 25px;
+                    }
+
+                    .ah-bl-box-bottom {
+                        @include displeyFlex(flex-start);
+                        height: 100%;
+
+                        .ah-bl-child {
+                            margin: 20px; 
+                        }
+                    }
+
+                }
+            }
+
+            .ah-br-box {
+                width: 350px;
+                margin: 0 20px;
+                padding: 15px 15px 25px 15px;
+                border: 1px solid #FC3F3F;
+                border-radius: 10px;
+
+                h3 {
+                    @include fontFamily("Open sans", normal);
+                    font-size: 25px;
+                }
+
+                .ah-br-form {
+                    @include displeyFlex(center);
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    margin: 15px 0;
+
+                    input {
+                        margin: 10px 0;
+                        padding: 5px;
+                    }
+
+                    button {
+                        @include btnStyle(0,0);
+                        width: 50%;
+                    }
+                }
+
+                .ah-br-result {
+                    @include displeyFlex(flex-start);
+
+                    p {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.ah-child-title {
+    @include fontFamily("Open sans", bold);
+    font-size: 20px;
+}
+
+.ah-child-info {
+    font-size: 20px;
+}
+
+
+.ah-bl-top {
+    border: 1px solid #FCB03F;
+    background-color: #FFEFD7;
+}
+
+.ah-bl-center {
+    border: 1px solid #65FC3F;
+    background-color: #DFFFD7;
+}
+
+.ah-bl-bottom {
+    border: 1px solid #3F69FC;
+    background-color: #D7E9FF;
+}

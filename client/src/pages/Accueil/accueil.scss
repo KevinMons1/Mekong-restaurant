@@ -1,0 +1,298 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+//---------------------------------------
+// Header
+//---------------------------------------
+
+.header-accueil {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-bg {
+    background-image: url("../../assets/images/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-bottom {
+    @include shadowStyle();
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    padding: 50px;
+    bottom: -5%;
+    background-color: $colorBlackBlue;
+    border-radius: 50px;
+    z-index: 5;
+}
+
+.header-text {
+    @include displeyFlex(space-between);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    z-index: 2;
+
+    .header-text-top {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        color: #fff;
+
+        h1 {
+            @include fontFamily("Roboto", bold);
+            font-size: 65px;
+        }
+
+        h2 {
+            @include fontFamily("Open sans", normal);
+            font-size: 35px;
+
+            span {
+                @include fontFamily("Roboto", bold);
+                color: $colorOrange;
+            }
+        }
+    }
+
+    .header-text-bottom {
+        @include displeyFlex(center);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        color: #fff;
+
+        p {
+            @include fontFamily("Open sans", normal);
+            font-size: 35px;
+        }
+
+        button {
+            @include btnStyle(1, 1);
+        }
+    }
+}
+
+//---------------------------------------
+// Section 1
+//---------------------------------------
+
+.accueil-section-one {
+    @include displeyFlex(space-between);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.aso-bg-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.aso-bg-circle1 {
+    top: -10%;
+    right: -10%;
+    background-color: #8DE2C3;
+}
+
+.aso-bg-circle2 {
+    top: 8%;
+    left: -10%;
+    background-color: #8DE2C3;
+}
+
+.aso-bg-circle3 {
+    left: -20%;
+    bottom: -10%;
+    background-color: #DCCDBA;
+}
+
+.aso-left {
+    width: 50%;
+
+    h3 {
+        @include fontFamily("Roboto", bold);
+        font-size: 35px;
+        margin-bottom: 10px
+    }
+
+    p {
+        @include fontFamily("Open sans", normal);
+        font-size: 22px;
+    }
+}
+
+.aso-right {
+    position: relative;
+    width: 400px;
+
+    .aso-right-img {
+        @include shadowStyle();
+        height: 400px;
+        overflow: hidden;
+
+        img {
+            display: none;
+            width: 100%;
+        }
+
+        .aso-active {
+            display: block;
+            -webkit-animation: fade 0.8s;
+                    animation: fade 0.8s
+        }
+    }
+
+    .aso-circles {
+        @include displeyFlex(center);
+        width: 100%;
+
+        .aso-btn-circle {
+            width: 20px;
+            height: 20px;
+            margin: 20px;
+            border: none;
+            border-radius: 50%;
+            background-color: #323038;
+            cursor: pointer;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        .aso-btn-circle:hover {
+            opacity: 0.6;
+        }
+
+        .aso-circle-active {
+            background-color: $colorOrange!important;
+        }
+    }
+
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//---------------------------------------
+// Section 1
+//---------------------------------------
+
+.accueil-section-two {
+    @include displeyFlex(center);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ast-left {
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+    z-index: 2;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover
+    }
+}
+
+.ast-right {
+    @include displeyFlex(center);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 650px;
+    height: 650px;
+    -webkit-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+            transform: translateX(-100px);
+    border-radius: 50%;
+    background-color: #EDCFA9;
+
+    .ast-right-box {
+        width: 75%;
+        padding-left: 10%;
+    }
+
+    h3 {
+        @include fontFamily("Roboto", bold);
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .ast-info {
+        @include displeyFlex(flex-start);
+        @include fontFamily("Open sans", normal);
+        font-size: 25px;
+        margin: 20px 0;
+    }
+
+    .ast-hours {
+        @include displeyFlex(space-around);
+        height: 90px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+
+        .ast-hours-item {
+            @include displeyFlex(space-between);      
+            -webkit-box-orient: vertical;      
+            -webkit-box-direction: normal;      
+                -ms-flex-direction: column;      
+                    flex-direction: column;
+            height: 100%;
+            margin: 0 5px;
+        }
+
+        .ast-hours-top {
+            @include fontFamily("Open sans", bold);
+            font-size: 15px;
+        }
+
+        .ast-hours-right {color: #980000}
+        .ast-hours-center, .ast-hours-left {color: #175A19}
+    }
+
+    button {
+        @include btnStyle(0, 1);
+        margin: 20px 0;
+    }
+}

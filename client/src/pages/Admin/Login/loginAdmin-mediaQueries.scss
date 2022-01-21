@@ -1,0 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 600px) {
+    .loginAdmin-form {
+        width: 300px!important;
+    }
+
+    .loginAdmin-redirect {
+        @include displeyFlex(center);
+
+        a {
+            @include fontFamily("Roboto", bold);
+            margin-left: 5px;
+            font-size: 18px;
+            color: crimson
+        }
+    }
+}
