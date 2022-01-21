@@ -27,7 +27,6 @@ class AuthClass {
         }
         else return false
     }
-
     logout() {
         this.authenticated = false
         reactLocalStorage.remove("isAdmin")
