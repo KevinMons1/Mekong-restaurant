@@ -19,7 +19,7 @@ const requestQuery = async (query, params) => {
 }
 
 const sendCommande = (data) => {
-    const io = require("../Utils/io").send(data)
+    // const io = require("../Utils/io").send(data)
 }
 
 const sendMail = (hourDeliver, email, product, total, emporter) => {
