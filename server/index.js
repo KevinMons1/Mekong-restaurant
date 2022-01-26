@@ -5,8 +5,8 @@ const http = require("http").Server(app)
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const path = require("path")
-// const port = process.env.PORT || 8080
-app.set('port', (process.env.PORT || 5000));
+const port = process.env.PORT || 8080
+// app.set('port', (process.env.PORT || 5000));
 const io = require("./Utils/io").init(http)
 
 const gestionSiteRouters = require("./Routers/gestionSite")
@@ -31,7 +31,7 @@ app.use("/api/orders", ordersRouter)
 app.use("/api/admin", adminRouter)
 app.use("/api/contact", contactRouter)
 
-// http.listen(port)
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
-  });
+http.listen(port)
+// app.listen(app.get('port'), function() {
+//     console.log('Node app is running on port', app.get('port'));
+//   });
