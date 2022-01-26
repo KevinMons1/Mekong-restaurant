@@ -8,7 +8,6 @@ import { SeeOrderContext } from './Contexts/SeeOrderContext'
 import { PositionContext } from './Contexts/PositionContext'
 import Auth from "./Auth"
 
-
 import Accueil from "./pages/Accueil/Accueil"
 import MenusCommander from "./pages/MenusCommander/MenusCommander"
 import Panier from "./pages/Panier/Panier"

@@ -1,5 +1,4 @@
 client/.env
 server/.env
-server/utils/db.js
 client/node_modules
 server/node_modules
