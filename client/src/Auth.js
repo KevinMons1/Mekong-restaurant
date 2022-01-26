@@ -1,6 +1,7 @@
 import axios from "axios"
 import { reactLocalStorage } from 'reactjs-localstorage';
 
+
 class AuthClass {
     constructor() {
         this.authenticated = false
