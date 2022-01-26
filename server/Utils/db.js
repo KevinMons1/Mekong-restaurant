@@ -21,6 +21,6 @@ const connectDb = () => {
     })
 }
 
-connection.on('error', connectDb());
+db.on('error', connectDb());
 
 module.exports = db
