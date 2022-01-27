@@ -6,8 +6,6 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 const path = require("path")
 const port = process.env.PORT || 8080
-const db = require("./Utils/db")
-const logger = require('heroku-logger')
 // const io = require("./Utils/io").init(http)
 
 const gestionSiteRouters = require("./Routers/gestionSite")
@@ -35,18 +33,3 @@ app.use("/api/contact", contactRouter)
 http.listen(port, () => {
     logger.info("Server started");
 })
-
-const blockDisconnect = () => {
-    logger.info("blockDisconnect");
-    setInterval(() => {
-        if (db) {
-            db.query("SELECT price FROM plats WHERE platId = 255", [], (err, result) => {
-                if (err) {
-                    throw err
-                }
-            })
-        }
-        logger.info("interval");
-    }, 25000);
-}
-blockDisconnect()
