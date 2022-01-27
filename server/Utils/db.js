@@ -19,13 +19,3 @@ db.getConnection((err) => {
 
 module.exports = db
 
-const blockDisconnect = () => {
-    setInterval(() => {
-        db.query("SELECT price FROM plats WHERE platId = 255", [], (err, result) => {
-            if (err) {
-                throw err
-            }
-        })
-    }, 60000);
-}
-blockDisconnect()
