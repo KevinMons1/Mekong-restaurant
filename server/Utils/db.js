@@ -29,7 +29,7 @@ const mysqlConfig = {
     database: process.env.DB_DATABASE
 }
 
-db = mysql.createConnection(mysqlConfig)
+let db = mysql.createConnection(mysqlConfig)
 
 const handleDisconnect = (client) => {
     client.on('error', (err) => {
