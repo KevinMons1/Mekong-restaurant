@@ -8,12 +8,21 @@ const io = require("../Utils/io").get()
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {
-        db.query(query, params, (err, result) => {
+        // Connect
+        db.getConnection((err) => {
             if (err) {
                 throw err
-            } else {
-                resolve(result)
             }
+            
+            db.query(query, params, (err2, result) => {
+                db.release()
+
+                if (err2) {
+                    throw err2
+                } else {
+                    resolve(result)
+                }
+            })
         })
     })
 }
@@ -35,7 +44,7 @@ const sendMail = (hourDeliver, email, product, total, emporter) => {
         host: "smtp.ethereal.email",
         port: 587,
         secure: false, // true for 465, false for other ports
-        service: "gmail", 
+        service: "GMAIL", 
         auth: {
             user: "kevin.developer.test@gmail.com", 
             pass: process.env.NODE_MAILER_PASSWORD

@@ -11,9 +11,9 @@ exports.sendMail = (req, res) => {
         host: "smtp.ethereal.email",
         port: 587,
         secure: false, // true for 465, false for other ports
-        service: process.env.NODE_MAILER_SERVICE, 
+        service: "GMAIL", 
         auth: {
-            user: process.env.NODE_MAILER_USER, 
+            user: "kevin.developer.test@gmail.com", 
             pass: process.env.NODE_MAILER_PASSWORD
         }
     })

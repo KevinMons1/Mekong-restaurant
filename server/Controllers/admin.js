@@ -3,12 +3,21 @@ const bcrypt = require("bcryptjs")
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {
-        db.query(query, params, (err, result) => {
+        // Connect
+        db.getConnection((err) => {
             if (err) {
                 throw err
-            } else {
-                resolve(result)
             }
+            
+            db.query(query, params, (err2, result) => {
+                db.release()
+
+                if (err2) {
+                    throw err2
+                } else {
+                    resolve(result)
+                }
+            })
         })
     })
 }
