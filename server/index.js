@@ -35,7 +35,7 @@ app.use("/api/contact", contactRouter)
 http.listen(port)
 
 const blockDisconnect = () => {
-    logger.log("blockDisconnect");
+    logger.info("blockDisconnect");
     setInterval(() => {
         if (db) {
             db.query("SELECT price FROM plats WHERE platId = 255", [], (err, result) => {
@@ -44,7 +44,7 @@ const blockDisconnect = () => {
                 }
             })
         }
-        logger.log("interval");
+        logger.info("interval");
     }, 25000);
 }
 blockDisconnect()
