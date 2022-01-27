@@ -15,12 +15,12 @@ const connectDb = () => {
     // Connect
     db.getConnection((err) => {
         if (err) {
+            connectDb()
             throw err
         }
         console.log("Mysql connected...")
     })
 }
-
-db.on('error', connectDb());
+connectDb()
 
 module.exports = db
