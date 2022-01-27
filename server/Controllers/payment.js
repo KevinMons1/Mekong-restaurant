@@ -10,7 +10,6 @@ const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {            
         db.query(query, params, (err, result) => {
             db.release()
-
             if (err) {
                 throw err
             } else {
