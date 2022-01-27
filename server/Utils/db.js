@@ -6,7 +6,8 @@ const mysql = require("mysql2")
     host: process.env.DB_HOST_JW,
     user: process.env.DB_USER_JW,
     password: process.env.DB_PASSWORD_JW,
-    database: process.env.DB_DATABASE_JW
+    database: process.env.DB_DATABASE_JW,
+    port: process.env.DB_PORT_JW
 })
 
 // Connect
