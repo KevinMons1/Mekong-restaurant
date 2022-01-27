@@ -9,4 +9,23 @@ const mysql = require("mysql2")
     database: process.env.DB_DATABASE
 })
 
+// Connect
+db.getConnection((err) => {
+    if (err) {
+        throw err
+    }
+    console.log("Mysql connected...")
+})
+
 module.exports = db
+
+const blockDisconnect = () => {
+    setInterval(() => {
+        db.query("SELECT price FROM plats WHERE platId = 255", [], (err, result) => {
+            if (err) {
+                throw err
+            }
+        })
+    }, 60000);
+}
+blockDisconnect()

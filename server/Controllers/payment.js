@@ -7,22 +7,15 @@ const path = require("path")
 const io = require("../Utils/io").get()
 
 const requestQuery = async (query, params) => {
-    return await new Promise ((resolve) => {
-        // Connect
-        db.getConnection((err) => {
+    return await new Promise ((resolve) => {            
+        db.query(query, params, (err, result) => {
+            db.release()
+
             if (err) {
                 throw err
+            } else {
+                resolve(result)
             }
-            
-            db.query(query, params, (err2, result) => {
-                db.release()
-
-                if (err2) {
-                    throw err2
-                } else {
-                    resolve(result)
-                }
-            })
         })
     })
 }
