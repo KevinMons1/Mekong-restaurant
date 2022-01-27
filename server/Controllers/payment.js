@@ -4,7 +4,7 @@ const stripe = require("stripe")("sk_test_51JFYiCF3UauaeAE1kKk3N9UoyhATmTJBvYXhb
 const nodemailer = require("nodemailer")
 const hbs = require("nodemailer-express-handlebars")
 const path = require("path")
-const io = require("../Utils/io").get()
+// const io = require("../Utils/io").get()
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {            

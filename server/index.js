@@ -31,5 +31,5 @@ app.use("/api/admin", adminRouter)
 app.use("/api/contact", contactRouter)
 
 http.listen(port, () => {
-    logger.info("Server started");
+    console.log("Server started");
 })
