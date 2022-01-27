@@ -6,7 +6,7 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 const path = require("path")
 const port = process.env.PORT || 8080
-// const io = require("./Utils/io").init(http)
+const io = require("./Utils/io").init(http)
 
 const gestionSiteRouters = require("./Routers/gestionSite")
 const gestionContenuRouters = require("./Routers/gestionContenu")

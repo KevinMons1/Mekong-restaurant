@@ -4,12 +4,11 @@ const stripe = require("stripe")(process.env.STRIPE_KEY)
 const nodemailer = require("nodemailer")
 const hbs = require("nodemailer-express-handlebars")
 const path = require("path")
-// const io = require("../Utils/io").get()
+const io = require("../Utils/io").get()
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {            
         db.query(query, params, (err, result) => {
-            db.release()
             if (err) {
                 throw err
             } else {
@@ -20,7 +19,7 @@ const requestQuery = async (query, params) => {
 }
 
 const sendCommande = (data) => {
-    // const io = require("../Utils/io").send(data)
+    const io = require("../Utils/io").send(data)
 }
 
 const sendMail = (hourDeliver, email, product, total, emporter) => {

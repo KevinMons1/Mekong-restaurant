@@ -13,12 +13,13 @@ import moment from "moment"
 import "moment/locale/fr"
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Helmet } from "react-helmet"
+import io from "socket.io-client"
 
-// const socket = io(process.env.REACT_APP_URL, {
-//     forceNew : false , 
-//     secure : true ,
-//     transports: [ 'websocket' ] 
-// })
+const socket = io(process.env.REACT_APP_URL, {
+    forceNew : false , 
+    secure : true ,
+    transports: [ 'websocket' ] 
+})
 
 export default function CommandesAdmin() {
 
@@ -45,7 +46,7 @@ export default function CommandesAdmin() {
                 })
                 setTotal(res.data.total)
                 setData(dataArray)
-                // listenSocket()
+                listenSocket()
                 })
                 .catch(err => changeAlertMessage("Erreur du serveur...", 1))
 
@@ -147,12 +148,12 @@ export default function CommandesAdmin() {
             .catch(err => changeAlertMessage("Erreur du serveur..."))
     }
 
-//     const listenSocket = () => {
-//         // get new order
-//         socket.on("sendCommande", newData => {
-//             setData(data => [newData, ...data])
-//         })
-//    }
+    const listenSocket = () => {
+        // get new order
+        socket.on("sendCommande", newData => {
+            setData(data => [newData, ...data])
+        })
+   }
 
     const handleClickSee = (item) => {
         setSeeCommandeCard(<SeeCommande data={item} toggleSeeCommande={() => setToggleSeeCommande(false)} />)  
