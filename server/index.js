@@ -44,6 +44,6 @@ const blockDisconnect = () => {
             })
         }
         console.log("interval");
-    }, 60000);
+    }, 25000);
 }
 blockDisconnect()
