@@ -2,17 +2,21 @@ const db = require("../Utils/db")
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {
-        db.query(query, params, (err, result) => {
-            db.release()
+        db.getConnection((err, connection) => {
             if (err) {
                 throw err
-            } else {
-                resolve(result)
             }
+            connection.query(query, params, (err, result) => {
+                db.releaseConnection(connection)
+                if (err) {
+                    throw err
+                } else {
+                    resolve(result)
+                }
+            })
         })
     })
 }
-
 exports.getReduction = async (req, res) => {
     const query = await requestQuery("SELECT reduction FROM gestionSite")
     res.status(200).send(query[0])

@@ -10,12 +10,4 @@ const mysql = require("mysql2")
     port: process.env.DB_PORT
 })
 
-// Connect
-db.getConnection((err) => {
-    if (err) {
-        throw err
-    }
-    console.log("Mysql connected...")
-})
-
 module.exports = db
