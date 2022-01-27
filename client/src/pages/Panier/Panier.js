@@ -103,7 +103,6 @@ export default function Panier() {
                                                                 if ((data.emporter || (rgSpecialsChar.test(numStreet) && rgSpecialsChar.test(postalCode) && (rgSpecialsChar.test(box.replace(/ /g, "")))) || box === "") && rgSpecialsChar.test(phone.replace(/ /g, ""))) {
                                                                     if (rgEmail.test(String(email).toLowerCase())) {
                                                                         if (panier.length > 0) {
-                                                                            console.log(data)
                                                                             history.push("/panier/paiement", data)
                                                                         } else changeAlertMessage("Votre panier est vide, vous ne pouvez donc pas commander.")
                                                                     } else changeAlertMessage("Adresse mail invalide")
