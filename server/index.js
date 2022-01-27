@@ -32,7 +32,9 @@ app.use("/api/orders", ordersRouter)
 app.use("/api/admin", adminRouter)
 app.use("/api/contact", contactRouter)
 
-http.listen(port)
+http.listen(port, () => {
+    logger.info("Server started");
+})
 
 const blockDisconnect = () => {
     logger.info("blockDisconnect");
