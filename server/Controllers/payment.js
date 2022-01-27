@@ -1,25 +1,20 @@
 require("dotenv").config()
 const db = require("../Utils/db")
-const stripe = require("stripe")("sk_test_51JFYiCF3UauaeAE1kKk3N9UoyhATmTJBvYXhbvNaFpnJT4fdfChhgxWe7TwqL4QPJsOaSNL0HecfYJsFi3h1grpn00vTZAvQ8f")
+const stripe = require("stripe")(process.env.STRIPE_KEY)
 const nodemailer = require("nodemailer")
 const hbs = require("nodemailer-express-handlebars")
 const path = require("path")
 // const io = require("../Utils/io").get()
 
 const requestQuery = async (query, params) => {
-    return await new Promise ((resolve) => {
-        await db.getConnection((err, connection) => {
+    return await new Promise ((resolve) => {            
+        db.query(query, params, (err, result) => {
+            db.release()
             if (err) {
                 throw err
+            } else {
+                resolve(result)
             }
-            connection.query(query, params, (err, result) => {
-                db.releaseConnection(connection)
-                if (err) {
-                    throw err
-                } else {
-                    resolve(result)
-                }
-            })
         })
     })
 }

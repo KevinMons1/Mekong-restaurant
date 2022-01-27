@@ -5,18 +5,13 @@ const fs = require("fs")
 
 const requestQuery = async (query, params) => {
     return await new Promise ((resolve) => {
-        db.getConnection((err, connection) => {
+        db.query(query, params, (err, result) => {
+            db.release()
             if (err) {
                 throw err
+            } else {
+                resolve(result)
             }
-            connection.query(query, params, (err, result) => {
-                db.releaseConnection(connection)
-                if (err) {
-                    throw err
-                } else {
-                    resolve(result)
-                }
-            })
         })
     })
 }
